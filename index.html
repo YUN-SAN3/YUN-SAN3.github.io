@@ -19,10 +19,7 @@
                     <a href="#" class="nav-link">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/YUN-SAN3" class="nav-link">关于收集者</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/YUN-SAN3/YUN-SAN3.github.io/issues" class="nav-link">提交工具</a>
+                    <a href="https://github.com/YUN-SAN3" class="nav-link">关于开发者</a>
                 </li>
             </ul>
         </div>
@@ -35,9 +32,9 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        <span class="hero-title-main">Minecraft工具收集平台</span>
+                        <span class="hero-title-main">Minecraft工具开发平台</span>
                     </h1>
-                    <p class="hero-subtitle">收集整理实用的Minecraft相关工具</p>
+                    <p class="hero-subtitle">开发和整理实用的Minecraft相关工具</p>
                     <div class="hero-buttons">
                         <button class="cta-button primary">立即探索</button>
                     </div>
@@ -62,64 +59,36 @@
                 <div class="tool-categories">
                     <div class="tool-category">
                         <div class="category-header">
-                            <i class="fas fa-server"></i>
-                            <h3>服务器工具</h3>
+                            <i class="fas fa-tools"></i>
+                            <h3>网站正在开发中</h3>
                         </div>
                         <div class="category-description">
-                            <p>专业的 Minecraft 服务器状态查询工具</p>
+                            <p>我们正在努力开发和完善 Minecraft 工具箱网站</p>
                         </div>
                         <div class="tools-grid">
-                            <div class="tool-card">
+                            <div class="tool-card placeholder">
                                 <div class="tool-icon">
-                                    <i class="fas fa-chart-bar"></i>
+                                    <i class="fas fa-hard-hat"></i>
                                 </div>
-                                <h4>MCSRVSTAT.US</h4>
-                                <p class="tool-description">实时查询 Minecraft 服务器运行状态、玩家数量等信息</p>
+                                <h4>功能即将上线</h4>
+                                <p>我们正在开发和整理各种实用的 Minecraft 工具，敬请期待！</p>
                                 <div class="tool-details">
                                     <div class="detail-item">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>支持 Java 和 Bedrock 版本</span>
+                                        <i class="fas fa-clock"></i>
+                                        <span class="expected-time" id="expectedTime">预计上线时间：</span>
                                     </div>
                                     <div class="detail-item">
-                                        <i class="fas fa-bolt"></i>
-                                        <span>快速获取服务器信息</span>
+                                        <i class="fas fa-sync"></i>
+                                        <span>定期更新内容</span>
                                     </div>
                                     <div class="detail-item">
-                                        <i class="fas fa-users"></i>
-                                        <span>显示在线玩家列表</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span>无广告免费使用</span>
+                                        <i class="fas fa-heart"></i>
+                                        <span>感谢您的关注</span>
                                     </div>
                                 </div>
-                                <a href="https://mcsrvstat.us/" target="_blank" class="tool-link">
-                                    <button class="tool-button">立即使用</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 可以在这里添加更多分类 -->
-                    <div class="tool-category">
-                        <div class="category-header">
-                            <i class="fas fa-tools"></i>
-                            <h3>更多工具收集计划</h3>
-                        </div>
-                        <div class="category-description">
-                            <p>正在收集中更多实用的 Minecraft 工具</p>
-                            <p class="collector-info">如果您有好用的Minecraft工具，欢迎通过页面底部的链接提交给我们</p>
-                        </div>
-                        <div class="tools-grid">
-                            <div class="tool-card collector-message">
-                                <div class="tool-icon">
-                                    <i class="fas fa-envelope"></i>
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <button class="tool-button" disabled>敬请期待</button>
                                 </div>
-                                <h4>工具征集</h4>
-                                <p>欢迎推荐您觉得好用的Minecraft相关工具</p>
-                                <a href="https://github.com/YUN-SAN3/YUN-SAN3.github.io/issues" target="_blank">
-                                    <button class="tool-button">提交工具</button>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -141,8 +110,7 @@
             </div>
             <div class="footer-links">
                 <a href="#">首页</a>
-                <a href="https://github.com/YUN-SAN3">关于收集者</a>
-                <a href="https://github.com/YUN-SAN3/YUN-SAN3.github.io/issues">提交工具</a>
+                <a href="https://github.com/YUN-SAN3">关于开发者</a>
             </div>
             <div class="footer-copyright">
                 <p>&copy; <span id="current-year"></span> MC工具箱</p>
@@ -159,5 +127,35 @@
             type="text/javascript"></script>
 
     <script src="js/script.js"></script>
+    
+    <!-- 预计上线时间交互脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const expectedTimeElement = document.getElementById('expectedTime');
+            
+            // 获取当前年份
+            const currentYear = new Date().getFullYear();
+            const nextYear = currentYear + 1;
+            const yearAfterNext = currentYear + 2;
+            
+            // 设置初始文本为明年
+            const originalText = '预计上线时间：' + nextYear + '年';
+            const hoverText = '也可能是' + yearAfterNext + '年？';
+            
+            if (expectedTimeElement) {
+                // 初始化显示明年
+                expectedTimeElement.textContent = originalText;
+                
+                // 添加鼠标事件监听器
+                expectedTimeElement.addEventListener('mouseenter', function() {
+                    this.textContent = hoverText;
+                });
+                
+                expectedTimeElement.addEventListener('mouseleave', function() {
+                    this.textContent = originalText;
+                });
+            }
+        });
+    </script>
 </body>
 </html>

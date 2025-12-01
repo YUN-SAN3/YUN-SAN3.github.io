@@ -296,6 +296,175 @@ body {
     background: linear-gradient(135deg, #2e7d32, #1b5e20);
 }
 
+/* 工具分类样式 */
+.tool-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tool-category {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tool-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.category-header i {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.category-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.category-description p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.tool-card:hover {
+    background: #edf7f1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+}
+
+.tool-card.placeholder {
+    background: #f0f4f8;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.tool-card.placeholder:hover {
+    background: #e2e8f0;
+    opacity: 1;
+}
+
+.tool-icon {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+
+.tool-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.tool-description {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.tool-details {
+    background: rgba(76, 175, 80, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item i {
+    color: #4caf50;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.detail-item a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.detail-item a:hover {
+    text-decoration: underline;
+}
+
+.tool-card p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.tool-link {
+    text-decoration: none;
+}
+
+.tool-button {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+.tool-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
 /* 分类占位样式 */
 .categories-section {
     padding: 5rem 0;
@@ -579,5 +748,43 @@ body {
         width: 40px;
         height: 40px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tool-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .tool-category {
+        padding: 1.5rem;
+    }
+    
+    .category-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tools-grid {
+        gap: 1rem;
+    }
+    
+    .tool-card {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-categories {
+        gap: 1.5rem;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .category-header i {
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 }

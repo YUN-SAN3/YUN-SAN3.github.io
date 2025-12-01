@@ -77,6 +77,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // 工具卡片悬停效果增强
+    const toolCards = document.querySelectorAll('.tool-card');
+    toolCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // 工具详情项悬停效果
+    const detailItems = document.querySelectorAll('.detail-item');
+    detailItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.color = '#2e7d32';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.color = '#4a5568';
+        });
+    });
+    
     // 3D方块旋转功能 - 无惯性版
     const minecraftBlock = document.querySelector('.minecraft-block');
     if (minecraftBlock) {
